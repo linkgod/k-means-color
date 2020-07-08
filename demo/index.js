@@ -1,11 +1,12 @@
+import renderLut from 'lut-canvas'
 import './styles.css';
-import '../src/index'
+import findDominantColors, { colorTransform } from '../src/index'
 
-document.getElementById('app').innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+// renderLut({}, document.getElementById('origin'))
+
+const originCanvas = document.getElementById('origin');
+const newCanvas = document.getElementById('new');
+
+setTimeout(() => {
+  colorTransform(originCanvas, newCanvas, 32)
+}, 0)

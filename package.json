@@ -8,6 +8,7 @@
   "source": "src/index.js",
   "scripts": {
     "start": "parcel ./demo/index.html --open -d build",
+    "deploy": "parcel build ./demo/index.html -d build --public-url ./",
     "build": "rollup -c"
   },
   "repository": {
@@ -30,6 +31,8 @@
     "@rollup/plugin-babel": "^5.0.4",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
+    "cssnano": "^4.1.10",
+    "lut-canvas": "^0.1.0",
     "parcel-bundler": "^1.6.1",
     "rollup": "^2.18.2"
   }
